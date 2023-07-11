@@ -1,3 +1,15 @@
+var string = "The number is "; //declaring variable
+var number = 42; //declaring variable
+var total = string + number; //declaring variable
+document.write(total); //display total
+document.write("\n");  //space
+var letters = "abc"; //declaring variable
+document.write(letters); //display letters
+
+document.write("\n"); //space
+
+
+
 var num1 = 10; //declaring variable
 var num2 = 5; //declaring variable
 var result = num1 + num2; //declaring variable
@@ -6,6 +18,7 @@ console.log("The result of the addition is:", result); //display in console
 console.log("10 is smaller than 5 ", compare); //display in console
 var john = 27; //declaring variable
 document.write("john"); //display john
+document.write("\n");
 function Nan() { //decalre function
     document.getElementById("Test").innerHTML = 0/0; //set id
 }
@@ -45,3 +58,4 @@ document.write(10 == 7 || 10 > 7); // or test
 function Not() { //decalre function
     document.getElementById("Test6").innerHTML = !(10 == 12); // set id
 }
+
