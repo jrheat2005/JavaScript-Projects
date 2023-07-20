@@ -1,11 +1,11 @@
-const Calculator = {
+const Calculator = { //keeping track of the numbers
     Display_Value: '0',
     First_Operand: null,
     Wait_Second_Operand: false,
     operator: null,
 };
 
-function Input_Digit(digit) {
+function Input_Digit(digit) { //changes the values
     const {Display_Value, Wait_Second_Operand } = Calculator;
     if (Wait_Second_Operand === true) {
         Calculator.Display_Value = digit;
@@ -16,14 +16,14 @@ function Input_Digit(digit) {
     }
 }
 
-function Input_Decimal(dot) {
+function Input_Decimal(dot) { // this is how the decimal is used
     if (Calculator.Wait_Second_Operand === true) return;
     if (!Calculator.Display_Value.includes(dot)) {
         Calculator.Display_Value += dot;
     }
 }
 
-function Handle_Operator(Next_Operator) {
+function Handle_Operator(Next_Operator) { //how the operators are used
     const {First_Operand, Display_Value, operator} = Calculator;
     const Value_of_Input = parseFloat(Display_Value);
     if (operator && Calculator.Wait_Second_Operand) {
@@ -32,10 +32,10 @@ function Handle_Operator(Next_Operator) {
     }
     if (First_Operand == null) {
         Calculator.First_Operand = Value_of_Input;
-    } else if (operator) {
+    } else if (operator) { //is there already and operator being used
         const Value_Now = First_Operand || 0;
         let result = Perform_Calculation[operator](Value_Now, Value_of_Input);
-        result = Number(result).toFixed(9);
+        result = Number(result).toFixed(9); // so you will only have 9 decimal numbers
         result = (result *1).toString();
         Calculator.Display_Value = parseFloat(result);
         Calculator.First_Operand = parseFloat(result);
@@ -52,18 +52,18 @@ const Perform_Calculation = {
     '=': (First_Operand, Second_Operand) => Second_Operand
 };
 
-function Calculator_Reset() {
+function Calculator_Reset() { //resetting the numbers to 0
     Calculator.Display_Value = '0';
     Calculator,First_Operand = null;
     Calculator.Wait_Second_Operand = false;
     Calculator.operator = null;
 }
-function Update_Display() {
+function Update_Display() {  
     const display = document.querySelector('.calculator-screen');
     display.value = Calculator.Display_Value;
 }
 
-Update_Display();
+Update_Display(); //this track button presses 
 const keys = document.querySelector('.calculator-keys');
 keys.addEventListener('click', (event) => {
     const { target } = event;
