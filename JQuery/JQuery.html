@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Enter title</title>
+    <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF8">
+    <meta content="width=device-width,initial-scale=1.0" name="viewport">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    </head>
+    <body>
+<button class="btn1">Fade out</button> <!--declaring buttons-->
+<button class="btn2">Fade in</button>
+    </body>
+    <!--making the h1 disappear-->
+    <script> 
+        $(document).ready(function() { 
+            $("html").append(
+                "<body>\
+                    <div id='container'>\
+                        <div id='inner'>\
+                            <h1>Basic JQuery</h1>\
+                            <p id='1'>Paragraph 1</p>\
+                            <p id='2'>Paragraph 2</p>\
+                            <p id='3'>Paragraph 3</p>\
+                        </div>\
+                    </div>\
+                </body>"
+            );
+            $("#2").css({"color":"red"}); //change the 2 p color
+            $("#3").click(function() {
+                $("h1").hide();
+            });
+        });
+        $(document).ready(function(){
+  $("#p1").mousedown(function(){ //alert when clicked on
+    alert("Mouse down over p1!");
+  });
+});
+$(document).ready(function(){ //fade in when clicked
+  $(".btn1").click(function(){
+    $("h1").fadeOut();
+  });
+  $(".btn2").click(function(){ //fade out when clicked
+    $("h1").fadeIn();
+  });
+});
+    </script>
+   
+</html>
