@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Enter title</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="./CSS/one_page_website.css">
+	<script src="JS/one_page_website.js"></script>
+	</head>
+	<body>
+	<!--Nav-->
+		<div class="wrap">
+			<div class="menu-container">
+				<ul class="menu">
+					<a href="#home" id="link"><li>HOME</li></a>
+					<a href="#gallery"><li>GALLERY</li></a>
+					<a href="#consulation"><li>CONSULTATION</li></a>
+				</ul>
+			</div>
+		</div>
+		<!--END NAV-->
+		<!--Home-->
+		<div id="home">
+			<div class="container">
+					<div class="text center">
+						<iframe width="549" height="335" src="https://www.youtube.com/embed/Tn8IDh21AVY" title="ASMR 15 Keyboards with Fast Typing for Studying &amp; Works🌞(4K, No Talking)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+					</div>
+				<div>
+					<span>Keyboard Specialties</span>
+				</div>
+			</div>
+		</div>
+		<!--END HOME-->
+		<!--Gallery-->
+		<section id="gallery">
+			<div class="container">
+				<h1>Gallery</h1>
+				<div class="flex-container">
+				
+				<!--PHOTO CONTAINER 1-->
+				<div class="row">
+					<div class="column">
+					  <img src="./Keys/Pics/thumbnail_1.png" onclick="openModal();currentSlide(1)" class="hover-shadow">
+					</div>
+					<div class="column">
+					  <img src="./Keys/Pics/thumbnail_2.png" onclick="openModal();currentSlide(2)" class="hover-shadow">
+					</div>
+					<div class="column">
+					  <img src="./Keys/Pics/thumbnail_3.png" onclick="openModal();currentSlide(3)" class="hover-shadow">
+					</div>
+					<div class="column">
+					  <img src="./Keys/Pics/thumbnail_4.png" onclick="openModal();currentSlide(4)" class="hover-shadow">
+					</div>
+				  </div>>
+
+				  <div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides">
+      <div class="numbertext">1 / 4</div>
+      <img src="./Keys/Pics/thumbnail_1.png" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 4</div>
+      <img src="./Keys/Pics/thumbnail_2.png" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 4</div>
+      <img src="./Keys/Pics/thumbnail_3.png" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">4 / 4</div>
+      <img src="./Keys/Pics/thumbnail_4.png" style="width:100%">
+    </div>
+
+    <!-- Next/previous controls -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <!-- Caption text -->
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+    <!-- Thumbnail image controls -->
+    <div class="column">
+      <img class="demo" src="./Keys/Pics/25%_1.png" onclick="currentSlide(1)" alt="Nature">
+    </div>
+
+    <div class="column">
+      <img class="demo" src="./Keys/Pics/25%_2.png" onclick="currentSlide(2)" alt="Snow">
+    </div>
+
+    <div class="column">
+      <img class="demo" src="./Keys/Pics/25%_3.png" onclick="currentSlide(3)" alt="Mountains">
+    </div>
+
+    <div class="column">
+      <img class="demo" src="./Keys/Pics/25%_4.png" onclick="currentSlide(4)" alt="Lights">
+    </div>
+  </div>
+</div>
+				<!--END PHOTO CONTAINER 4 -->
+		<section id="consulation">
+		<div class="container">
+			<div class="heading-padding">
+				<h1 class="heading-padding">Keyboard Updates</h1>
+				<div class="reservation">
+					<h2><span>Just input your information below</span>
+						<br />To be up to date on all the newest keyboards
+					</h2>
+					<p class="rsvp-text">
+						Please provide your basic information:
+					</p>
+					<div class="form-rsvp">
+						<form action="" method="post">
+							<input class="qoute" type="text" value="First Name">
+							<input class="qoute" type="text" value="Last Name">
+							<input class="qoute" type="text" value="Email Address">
+							<input class="qoute" type="text" value="Phone Number">
+							<div class="form-spacer">
+								<label class="terms">Terms and Conditions</label>
+							</div>
+							<div class="submit">
+								<input type="submit" value="Submit">
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer>
+	<p>Author: Joshua Heaton</p>
+	<p><a href="mailto:jrheat2005@gmail.com">Josh@gmail.com</a></p>
+	</footer>
+	</body>
+</html>
