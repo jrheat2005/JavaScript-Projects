@@ -68,7 +68,7 @@ button:hover {
     border-color: darkslategray;
     color: #fff;
     height: 100%;
-    grid-area: 2/3/4/5;
+    grid-area: 2/4/6/5;
 }
 
 .equal-sign:hover {
